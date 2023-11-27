@@ -14,13 +14,13 @@ public class UserCreateForm {
     @NotEmpty(message = "ID는 입력해야지.")
     private String username;
 
-    @NotEmpty(message = "뭐라도 입력해줘.")
+    @NotEmpty(message = "뭐라도 입력해야지.")
     private String password1;
 
     @NotEmpty(message = "맞는지 확인해야지?")
     private String password2;
 
-    @NotEmpty(message = "이메일도 필수네")
+    @NotEmpty(message = "이메일도 입력하래.")
     @Email
     private String email;
 }
