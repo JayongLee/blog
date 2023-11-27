@@ -11,16 +11,16 @@ import javax.validation.constraints.Size;
 @Setter
 public class UserCreateForm {
     @Size(min = 3, max =25)
-    @NotEmpty(message = "ID는 입력해야지.")
+    @NotEmpty(message = "ID는 입력해야지?")
     private String username;
 
-    @NotEmpty(message = "뭐라도 입력해야지.")
+    @NotEmpty(message = "뭐라도 입력해야지?")
     private String password1;
 
     @NotEmpty(message = "맞는지 확인해야지?")
     private String password2;
 
-    @NotEmpty(message = "이메일도 입력하래.")
+    @NotEmpty(message = "이메일도 입력해야지?")
     @Email
     private String email;
 }
