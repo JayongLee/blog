@@ -19,4 +19,9 @@ public class TestController {
     public String school(){
         return "name";
     }
+
+    @GetMapping("/")
+    public String root() {
+        return "redirect:/hello";
+    }
 }
