@@ -22,6 +22,6 @@ public class TestController {
 
     @GetMapping("/")
     public String root() {
-        return "redirect:/user/login";
+        return "redirect:/hello";
     }
 }
