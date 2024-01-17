@@ -7,10 +7,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Id;
 import javax.persistence.CascadeType;
 
+import com.jayong.blog.Mylog.Mylog;
 import lombok.Getter;
 import lombok.Setter;
 @Getter
@@ -26,6 +27,7 @@ public class Comment {
 
     private LocalDateTime createDate;
 
-    @OneToMany(mappedBy = "Mylog", cascade = CascadeType.REMOVE)
-    private List<Comment> commentList;
+    @ManyToOne
+    private Mylog mylog;
+
 }

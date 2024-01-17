@@ -1,13 +1,11 @@
 package com.jayong.blog.Mylog;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+import com.jayong.blog.Commnet.Comment;
 import lombok.Getter;
 import lombok.Setter;
 @Getter
@@ -25,6 +23,9 @@ public class Mylog {
         @Column(columnDefinition = "TEXT")
         // 내용
         private String content;
+
+        @OneToMany(mappedBy = "mylog", cascade = CascadeType.REMOVE)
+        private List<Comment> commentList;
 
         private LocalDateTime createDate;
 }
